@@ -1,10 +1,176 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Checkout</title>
-</head>
-<body>
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Checkaut</title>
+        <meta name="description" content="Checkaut">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/selectric.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
 
-</body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+    <div class="container">
+        
+        <div class="header">
+            <p class="header-title">ACME STORE</p>
+            <div class="hamburger"><span>Menu</span></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Shoes</a></li>
+                </ul>
+            </div>
+            <div class="bascket">
+                <img src="img/icon-bag.svg" alt="Bascket"> <span class="bascket-quantity">2</span>
+            </div>
+        </div>
+
+    </div>
+    
+    <hr />
+    
+    <main>
+
+        <div class="container">
+            <div class="row">
+                <p class="main-title">CHECKOUT</p>
+        
+                <div class="col-lg-6 col-lg-push-6 col-md-6 col-md-push-6">
+                    <div class="order-container">
+                        <p class="secondary-title">YOUR ORDER</p>
+
+                        <div class="product">
+                            <div class="product-img">
+                                <img src="img/pic-item.png" alt="glasses">
+                            </div>
+                            <p class="product-name">Acme product name</p>
+                            <div class="plus-minus">
+                                <img src="img/icon-minus.svg" alt="minus"> <span class="quantity">1</span> <img src="img/icon-plus.svg" alt="plus">
+                            </div>
+                            <span class="product-price"> Price </span>  <span class="product-price-amount"> 300.00$ </span>
+                        </div>
+                        <div class="product">
+                            <div class="product-img">
+                                <img src="img/pic-item.png" alt="glasses">
+                            </div>
+                            <p class="product-name">Motorhead glasses black</p>
+                            <div class="plus-minus">
+                                <img src="img/icon-minus.svg" alt="minus"> <span class="quantity">1</span> <img src="img/icon-plus.svg" alt="plus">
+                            </div>
+                            <span class="product-price"> Price </span>  <span class="product-price-amount"> 300.00$ </span>
+                        </div>
+
+                        <p class="secondary-title">ORDER SUMMARY</p>
+
+                        <div class="summary">
+                            <div class="summary-line">
+                                <span class="summary-name">Subtotal</span> <span class="summary-amount">$300.00</span>
+                            </div>
+                            <div class="summary-line">
+                                <span class="summary-name">Shipping</span> <span class="summary-amount">$20.00</span>
+                            </div>
+                            <hr />
+                            <div class="summary-line">
+                                <span class="summary-name">Total</span> <span class="summary-amount-total">$320.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-lg-pull-6 col-md-6 col-md-pull-6">
+                    
+                    <div class="contact-details-container">
+
+                        <div class="delivery">
+                            <div class="adress">
+                                <p class="secondary-title">DELIVERY ADDRESS</p>
+                                
+                                <label for="cardholder">FIRST NAME <i class="recuired"></i></label> 
+                                <input type="text" />
+
+                                <label for="cardholder">LAST NAME <i class="recuired"></i></label>
+                                <input type="text">
+
+                                <label for="cardholder">E-MAIL <i class="recuired"></i></label>
+                                <input type="text">
+
+                                <label for="cardholder">PHONE</label>
+                                <input type="text">
+
+                                <label for="cardholder">ADDRESS <i class="recuired"></i></label>
+                                <input type="text">
+
+                                <label for="cardholder">ADDRESS CONT.</label>
+                                <input type="text">
+
+                                <label for="cardholder">ZIP CODE <i class="recuired"></i></label>
+                                <input type="text">
+
+                                <label for="cardholder">CITY <i class="recuired"></i></label>
+                                <input type="text">
+
+                                <label for="cardholder">STATE <i class="recuired"></i></label>
+                                <input type="text">
+
+                                <label for="cardholder">COUNTRY <i class="recuired"></i></label>
+                                <select>
+                                  <option>United States</option>
+                                  <option>Poland</option>
+                                  <option>Ukraine</option>
+                                  <option>Germany</option>
+                                  <option>United Kingdom</option>
+                                </select>
+                                    
+                            </div>
+
+                            <div class="payment">
+                                <p class="secondary-title">PAYMENT</p>
+                                
+                                <label for="cardholder">CARD NUMBER <i class="recuired"></i></label>
+                                <input type="text">
+
+                                <label for="cardholder">CARD HOLDER <i class="recuired"></i></label>
+                                <input type="text">
+
+                                <label for="cardholder">CVC <i class="recuired"></i></label>
+                                <input type="text">
+                                
+                                <button><span>BUY</span></button>
+                            </div>
+                        </div>
+
+                        <div class="order">
+                        
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/jquery.selectric.min.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
 </html>
