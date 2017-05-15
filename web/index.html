@@ -96,67 +96,59 @@
                     
                     <div class="contact-details-container">
 
-                        <div class="delivery">
-                            <div class="adress">
                                 <p class="secondary-title">DELIVERY ADDRESS</p>
+                                <form action="#" name="checkout" id="checkout">
+                                    <label for="firstName">FIRST NAME <i class="recuired"></i></label> 
+                                    <input type="text" name="firstName" id="firstName">
+
+                                    <label for="lastName">LAST NAME <i class="recuired"></i></label>
+                                    <input type="text" name="lastName" id="lastName">
+
+                                    <label for="email">E-MAIL <i class="recuired"></i></label>
+                                    <input type="email" name="email" id="email">
+
+                                    <label for="phone">PHONE</label>
+                                    <input type="text">
+
+                                    <label for="address">ADDRESS <i class="recuired"></i></label>
+                                    <input type="text" name="address" id="address">
+
+                                    <label for="address-cont">ADDRESS CONT.</label>
+                                    <input type="text">
+
+                                    <label for="zipCode">ZIP CODE <i class="recuired"></i></label>
+                                    <input type="text" name="zipCode" id="zipCode">
+
+                                    <label for="city">CITY <i class="recuired"></i></label>
+                                    <input type="text" name="city" id="city">
+
+                                    <label for="state">STATE <i class="recuired"></i></label>
+                                    <input type="text" name="state" id="state">
+
+                                    <label for="country">COUNTRY <i class="recuired"></i></label>
+                                    <select>
+                                        <option value="">Select your country</option>
+                                        <option value="United States">United States</option>
+                                        <option value="Poland">Poland</option>
+                                        <option value="Ukraine">Ukraine</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                    </select>
                                 
-                                <label for="cardholder">FIRST NAME <i class="recuired"></i></label> 
-                                <input type="text" />
+                            
+                                    <p class="payment">PAYMENT</p>
+                                
+                                    <label for="cardNumber">CARD NUMBER <i class="recuired"></i></label>
+                                    <input type="text" name="cardNumber" id="cardNumber">
 
-                                <label for="cardholder">LAST NAME <i class="recuired"></i></label>
-                                <input type="text">
+                                    <label for="cardHolder">CARD HOLDER <i class="recuired"></i></label>
+                                    <input type="text" name="cardHolder" id="cardHolder">
 
-                                <label for="cardholder">E-MAIL <i class="recuired"></i></label>
-                                <input type="text">
-
-                                <label for="cardholder">PHONE</label>
-                                <input type="text">
-
-                                <label for="cardholder">ADDRESS <i class="recuired"></i></label>
-                                <input type="text">
-
-                                <label for="cardholder">ADDRESS CONT.</label>
-                                <input type="text">
-
-                                <label for="cardholder">ZIP CODE <i class="recuired"></i></label>
-                                <input type="text">
-
-                                <label for="cardholder">CITY <i class="recuired"></i></label>
-                                <input type="text">
-
-                                <label for="cardholder">STATE <i class="recuired"></i></label>
-                                <input type="text">
-
-                                <label for="cardholder">COUNTRY <i class="recuired"></i></label>
-                                <select>
-                                  <option>United States</option>
-                                  <option>Poland</option>
-                                  <option>Ukraine</option>
-                                  <option>Germany</option>
-                                  <option>United Kingdom</option>
-                                </select>
+                                    <label for="cvc">CVC <i class="recuired"></i></label>
+                                    <input type="text" name="cvc" id="cvc">
                                     
-                            </div>
-
-                            <div class="payment">
-                                <p class="secondary-title">PAYMENT</p>
-                                
-                                <label for="cardholder">CARD NUMBER <i class="recuired"></i></label>
-                                <input type="text">
-
-                                <label for="cardholder">CARD HOLDER <i class="recuired"></i></label>
-                                <input type="text">
-
-                                <label for="cardholder">CVC <i class="recuired"></i></label>
-                                <input type="text">
-                                
-                                <button><span>BUY</span></button>
-                            </div>
-                        </div>
-
-                        <div class="order">
-                        
-                        </div>
+                                    <button type="submit"><span>BUY</span></button>
+                                </form>
                     </div>
                 </div>
 
@@ -170,6 +162,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/jquery.selectric.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
         <script src="js/main.js"></script>
 
     </body>
