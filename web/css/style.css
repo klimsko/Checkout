@@ -30,12 +30,12 @@ body {
     margin-top: 0;
     margin-bottom: 40px;
     padding-top: 40px; }
-  .header .bascket {
+  .header .basket {
     position: absolute;
     top: 35px;
-    right: 0;
+    right: 15px;
     font-weight: 700; }
-    .header .bascket .bascket-quantity {
+    .header .basket .basket-quantity {
       font-size: 13px;
       font-weight: 700;
       color: #000; }
@@ -68,13 +68,15 @@ main {
     padding-top: 47px;
     margin-bottom: 63px;
     text-align: center; }
-  main .secondary-title, main .payment {
-    margin-left: 15px;
-    font-size: 13px;
-    font-weight: 700;
-    color: #414141; }
-  main .payment {
-    margin-top: 70px; }
+
+.secondary-title, .payment {
+  margin-left: 15px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #414141; }
+
+.payment {
+  margin-top: 70px; }
 
 form label.error {
   margin: 5px 0 -23px 10px;
@@ -105,6 +107,9 @@ form label.error {
       font-weight: 700;
       color: #fff; }
 
+.summary {
+  padding-top: 20px; }
+
 .btn-disabled {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%); }
@@ -133,7 +138,8 @@ form label.error {
     margin: 14px 0 5px; }
     .product .plus-minus img {
       width: 35px;
-      height: 35px; }
+      height: 35px;
+      cursor: pointer; }
   .product .product-price {
     font-size: 13px;
     font-weight: 400;
@@ -211,7 +217,8 @@ input:focus {
 @media only screen and (max-width: 991px) {
   .contact-details-container,
   .order-container {
-    width: 384px;
+    width: 100%;
+    max-width: 460px;
     margin: 0 auto;
     float: none; }
 
@@ -231,15 +238,8 @@ input:focus {
       margin-bottom: 0;
       padding-top: 0;
       line-height: 60px; }
-    .header .bascket {
-      position: absolute;
-      top: 15px;
-      right: 0;
-      font-weight: 700; }
-      .header .bascket .bascket-quantity {
-        font-size: 13px;
-        font-weight: 700;
-        color: #000; }
+    .header .basket {
+      top: 15px; }
 
   .show {
     display: block; }

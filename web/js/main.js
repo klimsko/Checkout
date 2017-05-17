@@ -56,7 +56,11 @@ $(function() {
 		    required: true,
 		    minlength: 3,
 		    digits: true
+		  },
+		  country: {
+		  	required: true
 		  }
+		  
     },
     // Specify validation error messages
     messages: {
@@ -69,25 +73,88 @@ $(function() {
 	      minlength: jQuery.validator.format("At least {0} characters required!")
 	    },
       email: "Please enter a valid email address",
-      country: "Please select an item!"
+      country: "Please select your country"
+      
     },
     submitHandler: function(form) {
       form.submit();
     }
   });
 
-  $('#checkout input').on('keyup blur', function () { 
-        if ($('#checkout').valid() && $('.selectric .label').text() != 'Select your country') { 
+  
+  $('#checkout input, .selectric-scroll li').on('keyup blur click', function () { 
+        if ($('#checkout').valid()) { 
             $('button').prop('disabled', false);
             $('button').removeClass('btn-disabled');
         } else {
             $('button').prop('disabled', 'disabled');
             $('button').addClass('btn-disabled');
+            $('.selectric-wrapper').after($('#country-error')).appendTo();
         }
     });
 
+// ORDER SUMMARY
+  var basket = 2;
+  var shipping = 20;
+    
+  function Products(container){
+  	this.qty = 1;
+	  this.plus = container.find('.plus');
+	  this.minus = container.find('.minus');
+	  this.qtyContainer = container.find('.quantity');
+	  this.priceContainer = container.find('.product-price-amount');
+	  this.price = parseInt(this.priceContainer.text());
+  }
 
-	
+  function sum(){
+  	var st = (product1.qty) * (product1.price) + (product2.qty) * (product2.price);
+  	$('#subtotal').text('$' + st);
+  	
+  	var total = st + shipping;
+  	$('#shipping').text('$' + shipping);
+  	$('#total').text('$' + total);
+  }
+  
+  Products.prototype.addQty = function(){
+		var self = this;
+		this.plus.click(function(){
+	  	self.qty += 1;
+	    self.qtyContainer.text(self.qty);
+	    
+	    basket += 1;
+	    $('.basket-quantity').text(basket);
+
+	    sum();
+	  })
+	}
+
+	Products.prototype.removeQty = function(){
+		var self = this;
+		this.minus.click(function(){
+	  	if (self.qty > 0){
+
+	  		self.qty -= 1;
+	  		self.qtyContainer.text(self.qty);
+
+	  		basket -= 1;
+	    	$('.basket-quantity').text(basket);
+
+	    	sum();
+	  	}
+	  })
+	}
+
+
+	var product1 = new Products($("#product1"));
+	product1.addQty();
+	product1.removeQty();
+
+	var product2 = new Products($("#product2"));
+	product2.addQty();
+	product2.removeQty();
+
+	sum();
+
 
   $(document).click(function() {
 			if ($icon.hasClass('icon-collapse')) $icon.toggleClass('icon-collapse icon-expand')

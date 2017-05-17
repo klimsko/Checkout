@@ -35,8 +35,8 @@
                     <li><a href="#">Shoes</a></li>
                 </ul>
             </div>
-            <div class="bascket">
-                <img src="img/icon-bag.svg" alt="Bascket"> <span class="bascket-quantity">2</span>
+            <div class="basket">
+                <img src="img/icon-bag.svg" alt="Basket"> <span class="basket-quantity">2</span>
             </div>
         </div>
 
@@ -54,39 +54,41 @@
                     <div class="order-container">
                         <p class="secondary-title">YOUR ORDER</p>
 
-                        <div class="product">
+                        <div id="product1" class="product">
                             <div class="product-img">
                                 <img src="img/pic-item.png" alt="glasses">
                             </div>
                             <p class="product-name">Acme product name</p>
                             <div class="plus-minus">
-                                <img src="img/icon-minus.svg" alt="minus"> <span class="quantity">1</span> <img src="img/icon-plus.svg" alt="plus">
+                                <img src="img/icon-minus.svg" class="minus"> <span class="quantity">1</span> <img src="img/icon-plus.svg" class="plus">
                             </div>
                             <span class="product-price"> Price </span>  <span class="product-price-amount"> 300.00$ </span>
                         </div>
-                        <div class="product">
+                        <div id="product2" class="product">
                             <div class="product-img">
                                 <img src="img/pic-item.png" alt="glasses">
                             </div>
                             <p class="product-name">Motorhead glasses black</p>
                             <div class="plus-minus">
-                                <img src="img/icon-minus.svg" alt="minus"> <span class="quantity">1</span> <img src="img/icon-plus.svg" alt="plus">
+                                <img src="img/icon-minus.svg" class="minus"> <span class="quantity">1</span> <img src="img/icon-plus.svg" class="plus">
                             </div>
                             <span class="product-price"> Price </span>  <span class="product-price-amount"> 300.00$ </span>
                         </div>
 
-                        <p class="secondary-title">ORDER SUMMARY</p>
-
+                        
                         <div class="summary">
+
+                            <p class="secondary-title">ORDER SUMMARY</p>
+
                             <div class="summary-line">
-                                <span class="summary-name">Subtotal</span> <span class="summary-amount">$300.00</span>
+                                <span class="summary-name">Subtotal</span> <span id="subtotal" class="summary-amount"></span>
                             </div>
                             <div class="summary-line">
-                                <span class="summary-name">Shipping</span> <span class="summary-amount">$20.00</span>
+                                <span class="summary-name">Shipping</span> <span id="shipping" class="summary-amount"></span>
                             </div>
                             <hr />
                             <div class="summary-line">
-                                <span class="summary-name">Total</span> <span class="summary-amount-total">$320.00</span>
+                                <span class="summary-name">Total</span> <span id="total" class="summary-amount-total"></span>
                             </div>
                         </div>
                     </div>
@@ -126,7 +128,7 @@
                                     <input type="text" name="state" id="state">
 
                                     <label for="country">COUNTRY <i class="recuired"></i></label>
-                                    <select>
+                                    <select name="country">
                                         <option value="">Select your country</option>
                                         <option value="United States">United States</option>
                                         <option value="Poland">Poland</option>
